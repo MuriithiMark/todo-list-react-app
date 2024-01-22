@@ -1,0 +1,17 @@
+.todo {
+    width: 95%;
+    height: 3em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo__title {
+    text-align: left;
+    width: 75%;
+}
+
+.todo__actions {
+    width: 25%;
+}
