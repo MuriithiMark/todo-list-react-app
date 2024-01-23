@@ -1,0 +1,27 @@
+.todo {
+    width: 95%;
+    height: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+
+.todo__title {
+    text-align: left;
+    font-size: larger;
+}
+
+.todo__actions {
+
+    button, button:focus, button:focus-visible {
+        background: none;
+        cursor: pointer;
+    }
+}
