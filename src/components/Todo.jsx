@@ -1,4 +1,7 @@
 import "./Todo.css";
+import CheckedIcon from "./icons/CheckedIcon";
+import DeleteIcon from "./icons/DeleteIcon";
+import UnCheckedIcon from "./icons/UnCheckedIcon";
 
 const Todo = ({ todo, todoActions }) => {
   console.log(todoActions);
@@ -7,19 +10,22 @@ const Todo = ({ todo, todoActions }) => {
     <div className="todo" id={id}>
       <span className="todo__title">{title}</span>
       <div className="todo__actions">
-      <input
-        type="checkbox"
-        name="todo-completion-checkbox"
-        value={completed}
-        className="todo__actions-completion-checkbox"
-        onClick={() => todoActions.changeCompletionStatus(id)}
-      />
-      <button
-        className="todo__actions-remove-todo"
-        onClick={() => todoActions.removeTodo(id)}
-      >
-        DELETE
-      </button>
+        <button
+          className="todo__actions-completion-status"
+          onClick={() => todoActions.changeCompletionStatus(id)}
+        >
+          {completed ? (
+            <CheckedIcon width={20} height={20} color="green" />
+          ) : (
+            <UnCheckedIcon width={20} height={20} color="green" />
+          )}
+        </button>
+        <button
+          className="todo__actions-remove-todo"
+          onClick={() => todoActions.removeTodo(id)}
+        >
+          <DeleteIcon width={20} height={20} color="red" />
+        </button>
       </div>
     </div>
   );

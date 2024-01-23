@@ -30,6 +30,7 @@ input:focus-visible {
 .add-todo__input {
     width: 85%;
     height: 4em;
+    padding-left: 0.5em;
     font-size: large;
     border: 0px;
 }
