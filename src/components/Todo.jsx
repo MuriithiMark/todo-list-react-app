@@ -20,11 +20,13 @@ const Todo = ({ todo, todoActions }) => {
 
   return (
     <div className="todo" id={id}>
+      {/* Completed tasks should not be edited */}
       <span
         className="todo__title"
-        contentEditable={isEditing}
+        contentEditable={isEditing && !completed}
         ref={titleRef}
-        suppressContentEditableWarning={isEditing}
+        suppressContentEditableWarning={isEditing && !completed}
+        style={{ textDecoration: completed ? "line-through": "none"}}
       >
         {title}
       </span>
