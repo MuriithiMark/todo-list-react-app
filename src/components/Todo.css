@@ -16,12 +16,20 @@
 .todo__title {
     text-align: left;
     font-size: larger;
+    width: 75%;
+    height: 80%;
+    display: flex;
+align-items: center;
 }
 
 .todo__actions {
-
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     button, button:focus, button:focus-visible {
         background: none;
         cursor: pointer;
+        font-weight: 700;
     }
 }

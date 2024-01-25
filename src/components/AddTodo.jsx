@@ -3,6 +3,10 @@ import './AddTodo.css';
 
 const AddTodo = ({ onTodoAdded }) => {
   const [todoTitle, setTodoTitle] = useState("");
+  const handleClick = () => {
+    onTodoAdded({ title: todoTitle});
+    setTodoTitle("");
+  }
 
   return (
     <div className="add-todo-form">
@@ -14,7 +18,7 @@ const AddTodo = ({ onTodoAdded }) => {
       />
       <button
         className="add-todo-form__button"
-        onClick={() => onTodoAdded({ title: todoTitle })}
+        onClick={handleClick}
       >
         ADD
       </button>
