@@ -19,7 +19,7 @@
     width: 75%;
     height: 80%;
     display: flex;
-align-items: center;
+    align-items: center;
 }
 
 .todo__actions {
@@ -27,7 +27,10 @@ align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    button, button:focus, button:focus-visible {
+
+    button,
+    button:focus,
+    button:focus-visible {
         background: none;
         cursor: pointer;
         font-weight: 700;
