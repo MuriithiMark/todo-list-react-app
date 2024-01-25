@@ -13,8 +13,6 @@ const TodoList = ({ todos, todoActions }) => {
       {todos.map((todo) => (
         <Todo todo={todo} todoActions={todoActions} />
       ))}
-      {/* <Todo todo={todos[0]} todoActions={todoActions} /> */}
-      {/* { todos.map((todo) => <Todo key={todo.id} todo={todo} todoActions={todoActions} /> )} */}
     </div>
   );
 };
